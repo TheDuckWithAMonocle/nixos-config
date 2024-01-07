@@ -75,6 +75,7 @@
     };
     printing = {
       enable = true;
+      drivers = [pkgs.epson-escpr];
     };
     pipewire = {
     enable = true;
