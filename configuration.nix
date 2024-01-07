@@ -77,6 +77,10 @@
       enable = true;
       drivers = [pkgs.epson-escpr];
     };
+    avahi = {
+      enable = true;
+      nssmdns = true;
+    };
     pipewire = {
     enable = true;
     alsa.enable = true;
