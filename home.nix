@@ -20,6 +20,7 @@
  wineWowPackages.waylandFull
  akregator
  epson-escpr
+ obs-studio
 
   ];
 
@@ -28,8 +29,8 @@
     enable = true;
     mutableExtensionsDir = true;
     extensions = with pkgs.vscode-extensions; [
-      yzhang.markdown-all-in-one 
-      foam.foam-vscode 
+      yzhang.markdown-all-in-one
+      foam.foam-vscode
       mhutchie.git-graph
       jnoortheen.nix-ide
       github.vscode-pull-request-github
@@ -41,17 +42,17 @@
     shellAliases = {
        update = "sudo nixos-rebuild switch";
     };
-   
+
   };
   firefox = {
     enable = true;
-    
-    
+
+
 };
   };
-    
+
 
 
 
 }
- 
+

@@ -89,7 +89,11 @@
     jack.enable = true;
     };
       };
-
+  fonts = {
+    fontDir.enable = true;
+    fontconfig.enable = true;
+    enableGhostscriptFonts = true;
+  };
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
