@@ -21,6 +21,7 @@
  akregator
  epson-escpr
  obs-studio
+ strawberry
 
   ];
 

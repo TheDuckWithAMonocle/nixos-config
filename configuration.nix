@@ -1,11 +1,11 @@
 { config, libs, pkgs, ... }:
 {
-  
+
 
   imports =
     [ <home-manager/nixos>
       ./hardware-configuration.nix
-      
+
         ];
     nix.settings.experimental-features = [ "nix-command""flakes" ];
     hardware= { #GPU
@@ -31,9 +31,9 @@
         powerOnBoot = true;
       };
     };
-    
+
   boot = { #Bootloader
-    loader = { 
+    loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
       };
@@ -58,9 +58,9 @@
       LC_PAPER = "en_IN";
       LC_TELEPHONE = "en_IN";
       LC_TIME = "en_IN";
-    }; 
+    };
       };
-      
+
   services = {
    xserver = { #X11
     enable = true;
@@ -97,7 +97,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  
+
 
   programs= {
     dconf.enable = true;
@@ -119,6 +119,12 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [];
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  plasma-browser-integration
+  elisa
+];
+
+  virtualisation.waydroid.enable = true;
 
   system.stateVersion = "23.11"; # Did you read the comment?
 
