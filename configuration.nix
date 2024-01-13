@@ -65,11 +65,11 @@
    xserver = { #X11
     enable = true;
     videoDrivers = ["nvidia"];
-    displayManager.defaultSession = "plasmawayland";
+    #displayManager.defaultSession = "plasmawayland";
     displayManager.autoLogin.enable = false;
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
-    desktopManager.plasma5.enable = true;
+    displayManager.gdm.enable = true;
+    #displayManager.sddm.wayland.enable = true;
+    desktopManager.gnome.enable = true;
     layout = "us";
     xkbVariant = "";
     };
@@ -119,9 +119,7 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [];
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-  plasma-browser-integration
-  elisa
+
 ];
 
   virtualisation.waydroid.enable = true;
