@@ -22,6 +22,7 @@
  epson-escpr
  obs-studio
  strawberry
+ picard
 
   ];
 
