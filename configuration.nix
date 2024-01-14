@@ -126,6 +126,7 @@
 virtualisation = {
   waydroid.enable = true;
   libvirtd.enable = true;
+
 };
 
   system.stateVersion = "23.11";
