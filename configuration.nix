@@ -107,7 +107,7 @@
    shell = pkgs.zsh;
    isNormalUser = true;
    description = "mono";
-   extraGroups = ["networkmanager" "wheel"];
+   extraGroups = ["networkmanager" "wheel" "libvirtd"];
    packages = with pkgs; [];
    };
 
@@ -123,9 +123,10 @@
   plasma-browser-integration
   elisa
 ];
+virtualisation = {
+  waydroid.enable = true;
+  libvirtd.enable = true;
+};
 
-  virtualisation.waydroid.enable = true;
-
-  system.stateVersion = "23.11"; # Did you read the comment?
-
+  system.stateVersion = "23.11";
 }
