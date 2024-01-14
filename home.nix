@@ -24,7 +24,7 @@
  strawberry
  picard
  virt-manager
-
+ obsidian
   ];
 
   dconf.settings = {
@@ -60,9 +60,6 @@
 
 };
   };
-
-
-
 
 }
 

@@ -118,6 +118,8 @@
    };
 
   nixpkgs.config.allowUnfree = true;
+   nixpkgs.config.permittedInsecurePackages = [
+                "electron-25.9.0"];
   environment.systemPackages = with pkgs; [];
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
   plasma-browser-integration
