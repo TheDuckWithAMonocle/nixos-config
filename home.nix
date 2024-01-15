@@ -24,6 +24,7 @@
  strawberry
  picard
  virt-manager
+ iosevka
 
   ];
 
