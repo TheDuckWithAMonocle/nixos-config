@@ -40,9 +40,8 @@
     extensions = with pkgs.vscode-extensions; [
       yzhang.markdown-all-in-one
       foam.foam-vscode
-      mhutchie.git-graph
       jnoortheen.nix-ide
-      github.vscode-pull-request-github
+      eamodio.gitlens
     ];
   };
   zsh = {
