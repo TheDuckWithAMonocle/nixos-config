@@ -21,8 +21,6 @@
  akregator
  epson-escpr
  obs-studio
- strawberry
- picard
  virt-manager
  iosevka
 
