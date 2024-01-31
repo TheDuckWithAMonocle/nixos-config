@@ -18,11 +18,12 @@
  qbittorrent
  gnome3.adwaita-icon-theme
  wineWowPackages.waylandFull
- akregator
  epson-escpr
  obs-studio
  virt-manager
  iosevka
+ python3
+ thunderbird
 
   ];
 
