@@ -117,7 +117,17 @@
    users.mono = import ./home.nix;
    };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+  # Allow proprietary packages
+  allowUnfree = true;
+
+  # Create an alias for the unstable channel
+  packageOverrides = pkgs: {
+    unstable = import <nixos-unstable> { # pass the nixpkgs config to the unstable alias # to ensure `allowUnfree = true;` is propagated:
+      config = config.nixpkgs.config;
+    };
+  };
+};
   environment.systemPackages = with pkgs; [];
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
   plasma-browser-integration
