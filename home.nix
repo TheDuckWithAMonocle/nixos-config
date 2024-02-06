@@ -24,6 +24,11 @@
  iosevka
  python3
  thunderbird
+ skanpage
+ krita
+
+
+
 
   ];
 

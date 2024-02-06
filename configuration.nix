@@ -96,6 +96,8 @@
   };
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  hardware.sane.enable = true;
+  hardware.sane.extraBackends = [ pkgs.sane-airscan ];
   security.rtkit.enable = true;
 
 
@@ -107,7 +109,7 @@
    shell = pkgs.zsh;
    isNormalUser = true;
    description = "mono";
-   extraGroups = ["networkmanager" "wheel" "libvirtd"];
+   extraGroups = ["networkmanager" "wheel" "libvirtd" "scanner" "lp"];
    packages = with pkgs; [];
    };
 
