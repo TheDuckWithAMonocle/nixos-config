@@ -21,12 +21,12 @@
  epson-escpr
  obs-studio
  virt-manager
- iosevka
  python3
  thunderbird
  skanpage
  krita
  godot_4
+ google-fonts
 
 
 
