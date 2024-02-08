@@ -26,6 +26,7 @@
  thunderbird
  skanpage
  krita
+ godot_4
 
 
 
