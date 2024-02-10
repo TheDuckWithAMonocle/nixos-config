@@ -31,7 +31,7 @@
  nicotine-plus
  audacity
  strawberry
-
+ unstable.foliate
 
   ];
 
