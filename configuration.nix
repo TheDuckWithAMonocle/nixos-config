@@ -42,6 +42,10 @@
   networking = {  #Networking
     hostName = "nixos";
     networkmanager.enable = true;
+    firewall = {
+    allowedTCPPorts = [ 6980 7001 ];
+    allowedUDPPorts = [ 6980 7001 ];
+    };
     };
 
   time.timeZone = "Asia/Kolkata";

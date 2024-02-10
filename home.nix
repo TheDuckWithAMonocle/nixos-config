@@ -27,8 +27,10 @@
  krita
  godot_4
  google-fonts
-
-
+ hexchat
+ nicotine-plus
+ audacity
+ strawberry
 
 
   ];
