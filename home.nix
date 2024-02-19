@@ -9,12 +9,9 @@
  keepassxc
  anki-bin
  vesktop
- lshw
- pciutils
  git
  lutris
  libreoffice-qt
- nix-update
  qbittorrent
  gnome3.adwaita-icon-theme
  wineWowPackages.waylandFull
@@ -27,12 +24,14 @@
  krita
  godot_4
  google-fonts
- hexchat
+ unstable.hexchat
  nicotine-plus
  audacity
  strawberry
  unstable.foliate
-
+ ollama
+ kate
+ obsidian
   ];
 
   dconf.settings = {
