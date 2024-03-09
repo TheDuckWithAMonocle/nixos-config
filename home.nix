@@ -7,7 +7,6 @@
  firefox
  vscode
  keepassxc
- anki-bin
  vesktop
  git
  lutris
@@ -29,9 +28,12 @@
  audacity
  strawberry
  unstable.foliate
- ollama
  kate
  obsidian
+ nixpkgs-review
+ blender-hip
+ lazygit
+
   ];
 
   dconf.settings = {

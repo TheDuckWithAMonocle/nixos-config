@@ -113,7 +113,7 @@
    shell = pkgs.zsh;
    isNormalUser = true;
    description = "mono";
-   extraGroups = ["networkmanager" "wheel" "libvirtd" "scanner" "lp"];
+   extraGroups = ["networkmanager" "wheel" "libvirtd" "scanner" "lp" "docker"];
    packages = with pkgs; [];
    };
 
@@ -126,7 +126,7 @@
   nixpkgs.config = {
   # Allow proprietary packages
   allowUnfree = true;
-
+  permittedInsecurePackages = ["electron-25.9.0"];
   # Create an alias for the unstable channel
   packageOverrides = pkgs: {
     unstable = import <nixos-unstable> { # pass the nixpkgs config to the unstable alias # to ensure `allowUnfree = true;` is propagated:
