@@ -1,5 +1,6 @@
 {config, pkgs, inputs, ...}:
 let
+
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {inherit pkgs;};
 
 in
@@ -72,6 +73,8 @@ in
     profiles.default = {
       extensions = with nur.repos.rycee.firefox-addons; [
         ublock-origin
+        violentmonkey
+        user-agent-string-switcher
 
       ];
       settings = {
@@ -79,6 +82,7 @@ in
         "dom.security.https_only_mode" = true;
         "identity.fxaccounts.enabled" = false;
         "signon.rememberSignons" = false;
+        "extensions.pocket.enabled" = false;
       };
     };
    };
