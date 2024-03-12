@@ -1,4 +1,8 @@
 {config, pkgs, inputs, ...}:
+let
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {inherit pkgs;};
+
+in
 {
  home.username = "mono";
  home.homeDirectory = "/home/mono";
@@ -7,7 +11,7 @@
  firefox
  vscode
  keepassxc
- vesktop
+ unstable.vesktop
  git
  lutris
  libreoffice-qt
@@ -59,18 +63,29 @@
     initExtra = ''source ${pkgs.grml-zsh-config}/etc/zsh/zshrc'';
     shellAliases = {
        update = "sudo nixos-rebuild switch";
+       clean = "sudo nix-collect-garbage -d";
     };
 
   };
   firefox = {
     enable = true;
+    profiles.default = {
+      extensions = with nur.repos.rycee.firefox-addons; [
+        ublock-origin
 
-
-};
-  };
-
-
-
-
+      ];
+      settings = {
+        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+        "dom.security.https_only_mode" = true;
+        "identity.fxaccounts.enabled" = false;
+        "signon.rememberSignons" = false;
+      };
+    };
+   };
+ };
 }
+
+
+
+
 
